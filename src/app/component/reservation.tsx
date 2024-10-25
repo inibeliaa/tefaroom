@@ -62,28 +62,7 @@ function Reservation() {
             <div className="flex flex-col rounded-md border-2 border-black px-4 py-10 md:p-4 w-full ">
               <div className="flex flex-col gap-5">
                 <div className="flex lg:gap-4">
-                  <div>
-                    <label className="block text-gray-700 mb-1 font-semibold">
-                      Check-in Date
-                    </label>
-                    <input
-                      type="date"
-                      id="check-in"
-                      className="border border-black p-1 w-50 rounded"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-gray-700 mb-1 font-semibold">
-                      Check-out Date
-                    </label>
-                    <input
-                      type="date"
-                      id="check-out"
-                      className="border border-black p-1 w-50 rounded"
-                      required
-                    />
-                  </div>
+                           
                   <div className="ml-56">
                     <label className="block text-gray-700 mb-1 font-semibold">
                       Room Type
