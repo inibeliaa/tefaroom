@@ -1,15 +1,10 @@
-import Navbar from "./web/navbar";
-import Header from "./web/header";
-import Content from "./web/content";
 
-
+import Resdas from "./component/resepsionis/resdas"
 
 export default function Home() {
   return (
     <>
-    <div><Navbar/></div>
-    <div><Header/></div>
-    <div><Content/></div>
+    <div><Resdas/></div>
     </>
   );
 }
