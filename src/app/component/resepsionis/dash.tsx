@@ -62,7 +62,7 @@ function Dash() {
                     <td className="px-6 py-4 border-b border-gray-200">Amba1223334</td>
                     <td className="px-6 py-4 border-b border-gray-200">1</td>
                     <td className="px-6 py-4 border-b border-gray-200">
-                        <span className="bg-green-100 text-green-600 px-2 py-1 rounded-full text-sm">Approve</span>
+                    <span className="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-sm">Pending</span>
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200">
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Detail</button>
@@ -76,7 +76,7 @@ function Dash() {
                     <td className="px-6 py-4 border-b border-gray-200">Amba1223334</td>
                     <td className="px-6 py-4 border-b border-gray-200">1</td>
                     <td className="px-6 py-4 border-b border-gray-200">
-                        <span className="bg-green-100 text-green-600 px-2 py-1 rounded-full text-sm">Approve</span>
+                    <span className="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-sm">Pending</span>
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200">
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Detail</button>

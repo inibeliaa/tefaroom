@@ -1,13 +1,13 @@
+import React from 'react'
 
-"use client";
 
 import Link from 'next/link';
-import Cek from "./cek"
+import Miaw from "./miaw"
 
-function Resep() {
-   
-    return (
-        <div className='flex h-screen'>
+function Ress() {
+  return (
+    <>
+    <div className='flex h-screen'>
         {/* sidebar*/}
         
         <aside className="z-20 hidden w-64 overflow-y-auto md:block flex-shrink-0 h-screen " style={{ backgroundColor: '#003C43' }}>
@@ -28,9 +28,8 @@ function Resep() {
                         </ul>
 
                         <ul>
-                            <li className="relative px-6 py-3">
-                            <span className="absolute inset-y-0 left-0 w-1 rounded-tr-lg rounded-br-lg" aria-hidden="true" style={{ backgroundColor: '#77B0AA' }}></span>
-                                <Link href="/forms" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white">
+                            <li className="relative px-6 py-3">                           
+                                <Link href="/forms" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200">
                                     <img className="w-5 h-5" src="/image/key.svg" alt="" />
                                     <span className="ml-4">Check In / Out</span>
                                 </Link>
@@ -44,7 +43,8 @@ function Resep() {
                             </li>
 
                             <li className="relative px-6 py-3">
-                                <Link href="/buttons" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200">
+                            <span className="absolute inset-y-0 left-0 w-1 rounded-tr-lg rounded-br-lg" aria-hidden="true" style={{ backgroundColor: '#77B0AA' }}></span>
+                                <Link href="/buttons" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-white">
                                     <img className="w-5 h-5" src="/image/food.svg" alt="" />
                                     <span className="ml-4">F&B</span>
                                 </Link>
@@ -89,13 +89,13 @@ function Resep() {
                             </ul>
                         </div>
                     </header>
-                    <Cek/>
+                    <Miaw/>
                 </div>
 
   </main>
 </div>
-    
-    );
+    </>
+  )
 }
 
-export default Resep;
+export default Ress

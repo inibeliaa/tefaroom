@@ -36,13 +36,7 @@ function Resdas() {
                                     <span className="ml-4">Check In / Out</span>
                                 </Link>
                             </li>
-
-                            <li className="relative px-6 py-3">
-                                <Link href="/cards" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200">
-                                    <img className="w-5 h-5" src="/image/book.svg" alt="" />
-                                    <span className="ml-4">Booking Service</span>
-                                </Link>
-                            </li>
+    
 
                             <li className="relative px-6 py-3">
                                 <Link href="/charts" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200">

@@ -1,5 +1,6 @@
 import Resdas from "./component/resepsionis/resdas"
 import Resep from "./component/resepsionis/resep"
+import Ress from "./component/resepsionis/ress"
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
 
     <div><Resdas/></div>
 
-
+    <div><Ress/></div>
     </>
   );
 }
