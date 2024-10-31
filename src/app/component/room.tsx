@@ -19,7 +19,7 @@ function Room() {
                         <div className="mb-12 grid gap-4 sm:grid-cols-2 sm:justify-items-stretch md:mb-16 md:grid-cols-2 lg:mb-20 lg:gap-6">
                             {/* Item */}
                             <a
-                                href="#"
+                                href=""
                                 className="flex flex-col gap-4 rounded-md bg-gray-100 px-4 py-8 md:p-4 transform hover:scale-105"
                             >
                                 <div className="relative	">
