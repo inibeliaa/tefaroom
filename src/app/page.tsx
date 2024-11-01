@@ -1,15 +1,11 @@
-import Resdas from "./component/resepsionis/resdas"
-import Resep from "./component/resepsionis/resep"
-import Ress from "./component/resepsionis/ress"
+import Page from "./resept/page"
 
 export default function Home() {
   return (
     <>
-    <div><Resep/></div>
+    <div><Page/></div>
 
-    <div><Resdas/></div>
-
-    <div><Ress/></div>
+    
     </>
   );
 }

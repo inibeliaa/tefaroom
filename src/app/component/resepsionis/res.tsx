@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 import Miaww from "./miaww"
 
+
 function Res() {
   return (
     <>
@@ -41,7 +42,7 @@ function Res() {
                             </li>
 
                             <li className="relative px-6 py-3">                           
-                                <Link href="/buttons" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200">
+                                <Link href="../atmin" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200">
                                     <img className="w-5 h-5" src="/image/food.svg" alt="" />
                                     <span className="ml-4">F&B</span>
                                 </Link>

@@ -23,7 +23,7 @@ function Cek() {
 
     return (
       <>
-      <div className="flex ml-auto right-2 pl-6 pt-6 mb-6">
+      <div className="flex ml-auto right-2 pl-6 pt-6 mb-6 mr-6">
       <div className="flex "> 
       <div className='border border-2 border-black rounded-md flex justify-center space-x-4'>
     <button className={`px-4 py-2 ${activeTab === 'checkin' ? 'text-white bg-[#003C43]' : ''}`} 
@@ -163,13 +163,13 @@ function Cek() {
       <select className="w-full border border-black rounded p-2">
         <option>Available</option>
         <option>Booked</option>
-      </select>
+      </select> 
     </div>
   
     <div>
       <label className="block mb-1 font-semibold">Payment Method</label>
       <select className="w-full border border-black rounded p-2">
-        <option>Card/Debit Card</option>
+        <option>Transfer</option>
         <option>Cash</option>
       </select>
     </div>

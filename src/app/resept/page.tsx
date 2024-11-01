@@ -1,11 +1,12 @@
 import React from 'react'
-import Resep from "../component/resepsionis/resep"
+import Res from "../component/resepsionis/res"
 import Resdas from "../component/resepsionis/resdas"
+
 
 function Page() {
   return (
     <>
-        <div><Resep/></div>
+        <div><Res/></div>
         <div><Resdas/></div>
     </>
  

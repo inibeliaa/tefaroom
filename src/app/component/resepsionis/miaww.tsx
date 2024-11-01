@@ -4,7 +4,7 @@ function Miaww() {
   return (
     <>
     <div className="p-6 bg-white rounded-lg shadow-md">
-    <h2 className="text-xl font-bold mb-4 text-gray-700">Transaksi Pembayaran</h2>
+    <h2 className="text-xl font-bold mb-4 text-gray-700">Transaksi Pembayaran F&B</h2>
     <div className="flex justify-between items-center mb-4">
         {/* Filter and Search */}
         <div className="flex items-center space-x-4">

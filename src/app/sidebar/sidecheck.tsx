@@ -2,9 +2,9 @@ import React from 'react'
 
 
 import Link from 'next/link';
-import Miaw from "./miaw"
+import Miaw from "../component/resepsionis/miaw"
 
-function Ress() {
+function Sidecheck() {
   return (
     <>
     <div className='flex h-screen'>
@@ -98,4 +98,4 @@ function Ress() {
   )
 }
 
-export default Ress
+export default Sidecheck

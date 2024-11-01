@@ -1,52 +1,10 @@
 // pages/index.js
 import React from 'react';
-import { Bar, Doughnut } from 'react-chartjs-2';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    ArcElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
 
-// Register the components
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    ArcElement,
-    Title,
-    Tooltip,
-    Legend
-);
+
 
 const Dashboard = () => {
-    const visitorData = {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr'],
-        datasets: [
-            {
-                label: 'Visitors',
-                data: [5000, 10000, 15000, 20000],
-                backgroundColor: ['#66bb6a', '#42a5f5', '#ffca28', '#ef5350'],
-                // Set the bar thickness to be larger than default
-                barThickness: 40, // Adjust the thickness here (default is usually smaller)
-            },
-        ],
-    };
-
-    const checkinData = {
-        labels: ['Room', 'F&B', 'Laundry'],
-        datasets: [
-            {
-                data: [60, 30, 10],
-                backgroundColor: ['#42a5f5', '#66bb6a', '#ef5350'],
-            },
-        ],
-    };
-
+    
     return (
         <div className="p-6 bg-gray-100 min-h-screen">
             {/* Statistic Cards */}
@@ -72,11 +30,11 @@ const Dashboard = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                     <h3 className="text-xl font-semibold mb-4">Check-in</h3>
-                    <Bar data={visitorData} />
+                    
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                     <h3 className="text-xl font-semibold mb-4">Total</h3>
-                    <Doughnut data={checkinData} />
+                    
                 </div>
             </div>
 
