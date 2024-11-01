@@ -4,7 +4,7 @@
 
 import React, { useState } from 'react';
 
-function Cek() {
+function Checkin() {
     const [activeTab, setActiveTab] = useState('checkin');
     // const [formData, setFormData] = useState({
     //     checkIn: '',
@@ -347,4 +347,4 @@ function Cek() {
     );
     
 }
-export default Cek;
+export default Checkin;

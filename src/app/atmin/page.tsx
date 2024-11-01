@@ -1,12 +1,11 @@
-
-import Sidebar from "../component/sidebar";
+import Sidebardash from "../sidebar/sidebardash";
 
 
 
 export default function Home() {
     return (
         <>
-            <div><Sidebar /></div>
+            <div><Sidebardash /></div>
         </>
     );
 }

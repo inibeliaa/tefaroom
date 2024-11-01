@@ -45,7 +45,7 @@ function header() {
                         {/* Hero Image */}
                         <div>
                             <img
-                                src="/image/hotel.jpg"
+                                src="/image/hotel.png"
                                 alt=""
                                 className="h-full w-full max-w-2xl object-cover rounded-3xl"
                             />

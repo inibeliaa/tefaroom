@@ -1,11 +1,12 @@
 import React from 'react'
+import Link from 'next/link'
 
 function Room() {
     return (
         <>
             <section>
                 {/* Container */}
-                <div className="mx-auto  w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+                <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
                     {/* Component */}
                     <div className="flex flex-col items-center">
                         {/* Title */}
@@ -18,11 +19,8 @@ function Room() {
                         {/* Content */}
                         <div className="mb-12 grid gap-4 sm:grid-cols-2 sm:justify-items-stretch md:mb-16 md:grid-cols-2 lg:mb-20 lg:gap-6">
                             {/* Item */}
-                            <a
-                                href=""
-                                className="flex flex-col gap-4 rounded-md bg-gray-100 px-4 py-8 md:p-4 transform hover:scale-105"
-                            >
-                                <div className="relative	">
+                            <Link href="../reservasi2" className="flex flex-col gap-4 rounded-md bg-gray-100 px-4 py-8 md:p-4 transform hover:scale-105">
+                                <div className="relative">
                                     <img
                                         src="/image/kamar1.png"
                                         alt=""
@@ -45,15 +43,12 @@ function Room() {
                                     <p className="font-bold">
                                         Deluxe twin double
                                     </p>
-                                    {/* Divider */} <div className="h-px w-full bg-black"></div>
-
+                                    {/* Divider */}
+                                    <div className="h-px w-full bg-black"></div>
                                 </div>
-                            </a>
+                            </Link>
                             {/* Item */}
-                            <a
-                                href="#"
-                                className="flex flex-col gap-4 rounded-md bg-gray-100 px-4 py-8 md:p-4 transform hover:scale-105"
-                            >
+                            <Link href="/reservasi1" className="flex flex-col gap-4 rounded-md bg-gray-100 px-4 py-8 md:p-4 transform hover:scale-105">
                                 <div className="relative">
                                     <img
                                         src="/image/kamar2.png"
@@ -77,17 +72,11 @@ function Room() {
                                     <p className="font-bold">
                                         Deluxe twin double
                                     </p>
-                                    {/* Divider */} <div className="h-px w-full bg-black"></div>
+                                    {/* Divider */}
+                                    <div className="h-px w-full bg-black"></div>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
-                        {/* Button */}
-                        <a
-                            href="#"
-                            className="rounded-md bg-black px-6 py-3 font-semibold text-white"
-                        >
-                            Check All&nbsp;Reviews
-                        </a>
                     </div>
                 </div>
             </section>
