@@ -49,7 +49,7 @@ const Sidebarsts: React.FC = () => {
                             </li>
 
                             <li className="relative px-6 py-3">
-                                <Link href="/modals" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                                <Link href="../dry" className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
                                     <img className="w-5 h-5" src="/image/laundry.svg" alt="" />
                                     <span className="ml-4">Laundry</span>
                                 </Link>

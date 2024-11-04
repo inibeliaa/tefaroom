@@ -1,11 +1,11 @@
-import Sidebardash from "../sidebar/sidebardash";
+import Dashatmin from "../sidebar/dashatmin";
 
 
 
 export default function Home() {
     return (
         <>
-            <div><Sidebardash /></div>
+            <div><Dashatmin /></div>
         </>
     );
 }
