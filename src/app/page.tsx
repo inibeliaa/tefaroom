@@ -1,15 +1,13 @@
-import Navbar from "./web/navbar";
-import Header from "./web/header";
-import Content from "./web/content";
 
+import Reservation1 from "./component/reservation1";
 
 
 export default function Home() {
   return (
     <>
-    <div><Navbar/></div>
-    <div><Header/></div>
-    <div><Content/></div>
+   
+
+    <div><Reservation1/></div>
     </>
   );
 }
