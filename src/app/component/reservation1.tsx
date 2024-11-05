@@ -29,7 +29,7 @@ function Reservation1() {
     }, [adult, children]);
 
   async function Reservasi() {
-    const url = `${process.env.NEXT_PUBLIC_URL}reservasi`;
+    const url = `https://355px512-2000.asse.devtunnels.ms/reservasi`;
     try {
         const res = await axios.post(
             url,
