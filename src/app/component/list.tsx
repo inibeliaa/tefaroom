@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const List = () => {
     const [roomData, setRoomData] = useState([
@@ -8,13 +9,11 @@ const List = () => {
             roomNumber: 101,
             name: "Deluxe Room",
             price: 500000,
-            facilities: "AC, Wi-Fi, TV",
         },
         {
             roomNumber: 102,
             name: "Superior Room",
             price: 450000,
-            facilities: "AC, Wi-Fi, TV",
         },
     ]);
 
@@ -22,6 +21,22 @@ const List = () => {
         const updatedData = [...roomData];
         updatedData[index] = { ...updatedData[index], [field]: value };
         setRoomData(updatedData);
+    };
+
+    // Fungsi untuk menyimpan perubahan ke server
+    const handleSaveChanges = async () => {
+        try {
+            // Mengirim data yang diperbarui ke server
+            await axios.put(`${process.env.NEXT_PUBLIC_URL}api/rooms`, roomData, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            alert("Perubahan berhasil disimpan!");
+        } catch (error) {
+            console.error("Error updating room data:", error);
+            alert("Terjadi kesalahan saat menyimpan perubahan.");
+        }
     };
 
     return (
@@ -33,7 +48,6 @@ const List = () => {
                         <th className="border px-4 py-2">Room Number</th>
                         <th className="border px-4 py-2">Room Name</th>
                         <th className="border px-4 py-2">Price</th>
-                        <th className="border px-4 py-2">Facilities</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,21 +70,16 @@ const List = () => {
                                     className="w-full border border-gray-300 rounded px-2 py-1"
                                 />
                             </td>
-                            <td className="border px-4 py-2">
-                                <input
-                                    type="text"
-                                    value={room.facilities}
-                                    onChange={(e) => handleInputChange(index, 'facilities', e.target.value)}
-                                    className="w-full border border-gray-300 rounded px-2 py-1"
-                                />
-                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
 
             <div className="flex justify-end mt-4">
-                <button className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-600">
+                <button
+                    onClick={handleSaveChanges}
+                    className="px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-600"
+                >
                     Save Changes
                 </button>
             </div>

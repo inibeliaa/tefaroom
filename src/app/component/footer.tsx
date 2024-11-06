@@ -74,9 +74,6 @@ function footer() {
                                     Laundry
                                 </a>
                                 <a href="" className="font-inter font-light text-white hover:text-gray-400">
-                                    FaQ*
-                                </a>
-                                <a href="" className="font-inter font-light text-white hover:text-gray-400">
                                     Contact
                                 </a>
                             </div>

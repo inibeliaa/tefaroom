@@ -1,30 +1,37 @@
 import React from 'react'
-
+import Link from 'next/link'
 
 function navbar() {
     return (
         <>
-            <nav style={{ backgroundColor: '#003C43' }}>
-                <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className="flex justify-between items-center h-16">
-                        <div className="flex items-center">
-                            <div className='flex'>
-                            <img className="size-12" src="/image/logo.png" alt="logo" />
-                            </div>
-                        </div>
-                        <div className='hidden md:block'>
-                            <div className='ml-4 flex items-center space-x-10 '>
-                                <a href="#" className='text-white'>About Us</a>
-                                <a href="#" className='text-white'>Service</a>
-                                <a href="#" className='text-white'>Use Case</a>
-                                <a href="#" className='text-white'>Pricing</a>
-                                <a href="#" className='text-white'>Blog</a>
-                                <a href="#" className='text-white border-2 bg-gre rounded-md px-4 py-2'>request a quote</a>
-                            </div>
-                        </div>
+            <header className="text-white" style={{ backgroundColor: '#003C43' }}>
+                <div className="container mx-auto flex items-center justify-between py-4 px-6">
+                    {/* Logo */}
+                    <div className="flex items-center space-x-3">
+                        <img src="/image/logo.png" alt="Logo" className="h-12 w-12" />
+                    </div>
+
+                    {/* Navbar Links */}
+                    <nav className="flex space-x-8 text-lg">
+                        <Link href="/Room" className="hover:text-gray-300">Home</Link>
+                        <Link href="/rooms" className="hover:text-gray-300">Rooms</Link>
+                        <Link href="/laundry" className="hover:text-gray-300">Laundry</Link>
+                        <Link href="/contact" className="hover:text-gray-300">Contact</Link>
+                    </nav>
+
+                    {/* Login & Sign Up Buttons */}
+                    <div className="flex space-x-4">
+                        <Link href="../login">
+                            <button className="text-black rounded-md px-4 py-2 hover:scale-105" style={{ backgroundColor: '#77B0AA' }}>
+                                Login
+                            </button>
+                        </Link>
+                        <Link href="../login">
+                            <button className="text-white px-4 py-2 hover:border-b-2">Sign Up</button>
+                        </Link>
                     </div>
                 </div>
-            </nav>
+            </header>
         </>
     )
 }

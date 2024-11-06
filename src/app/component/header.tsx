@@ -20,7 +20,7 @@ function header() {
                             {/* Button */}
                             <div className="mb-6 flex items-stretch md:mb-10 lg:mb-12">
                                 <a
-                                    href="#"
+                                    href="../Room#room"
                                     className="mr-5 rounded-md px-8 py-4 text-center font-semibold text-black md:mr-6 lg:mr-8 transform hover:scale-105" style={{ backgroundColor: '#77B0AA' }}
                                 >
                                     Learn More
@@ -34,7 +34,7 @@ function header() {
                                 </li>
                                 <li className="mr-16">
                                     <h3 className="text-2xl font-bold md:text-3xl text-white">12K+</h3>
-                                    <p className="text-sm text-white">Downloads</p>
+                                    <p className="text-sm text-white">Visitors</p>
                                 </li>
                                 <li className="mr-16">
                                     <h3 className="text-2xl font-bold md:text-3xl text-white">1K+</h3>
