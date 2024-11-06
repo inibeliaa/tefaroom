@@ -1,5 +1,35 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
+import axios from 'axios';
 
+    const getData = async () => {
+        await axios.get(`https://djlgqjq5-7891.asse.devtunnels.ms/riwayat`)
+        .then ((response) => {
+            let bucket = ``;
+            const riwayat = response.data;
+            for (let i = 0; i < riwayat.length; i++){
+             bucket += `
+                <tr>
+                    <td className="px-6 py-4 border-b border-gray-200">${riwayat[i].nama} </td>
+                       <td className="px-6 py-4 border-b border-gray-200">${riwayat[i].tanggal_pesanan}</td>
+                    <td className="px-6 py-4 border-b border-gray-200">${riwayat[i].reservation_code}</td>
+                    <td className="px-6 py-4 border-b border-gray-200">${riwayat[i].jumlah_kamar}</td>
+                    <td className="px-6 py-4 border-b border-gray-200">
+                        <span className="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-sm">${riwayat[i].status}</span>
+                    </td>
+                    <td className="px-6 py-4 border-b border-gray-200">
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Detail</button>
+                    </td>
+                </tr>
+                `
+            }
+            document.getElementById('result').innerHTML = bucket;
+        })
+        .catch((error) => {
+            console.log(error.massage);
+        });
+    }
+        getData();
 function Dash() {
   return (
     <>
@@ -27,10 +57,10 @@ function Dash() {
                     <th className="px-6 py-3 border-b border-gray-200 text-left text-gray-700 font-medium">Aksi</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody  id='result' >
                 {/* Example Row 1 */}
                 <tr>
-                    <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
+                    {/* <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
                     <td className="px-6 py-4 border-b border-gray-200">03.25.2024</td>
                     <td className="px-6 py-4 border-b border-gray-200">Amba1223334</td>
                     <td className="px-6 py-4 border-b border-gray-200">1</td>
@@ -39,11 +69,11 @@ function Dash() {
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200">
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Detail</button>
-                    </td>
+                    </td> */}
                 </tr>
                 {/* Example Row 2 */}
                 <tr>
-                    <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
+                    {/* <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
                     <td className="px-6 py-4 border-b border-gray-200">03.25.2024</td>
                     <td className="px-6 py-4 border-b border-gray-200">Amba1223334</td>
                     <td className="px-6 py-4 border-b border-gray-200">1</td>
@@ -52,12 +82,12 @@ function Dash() {
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200">
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Detail</button>
-                    </td>
+                    </td> */}
                 </tr>
                 {/* Duplicate the rows as necessary */}
                 {/* Example Row 2 */}
                 <tr>
-                    <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
+                    {/* <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
                     <td className="px-6 py-4 border-b border-gray-200">03.25.2024</td>
                     <td className="px-6 py-4 border-b border-gray-200">Amba1223334</td>
                     <td className="px-6 py-4 border-b border-gray-200">1</td>
@@ -66,12 +96,12 @@ function Dash() {
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200">
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Detail</button>
-                    </td>
+                    </td> */}
                 </tr>
                 {/* Duplicate the rows as necessary */}
                 {/* Example Row 2 */}
                 <tr>
-                    <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
+                    {/* <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
                     <td className="px-6 py-4 border-b border-gray-200">03.25.2024</td>
                     <td className="px-6 py-4 border-b border-gray-200">Amba1223334</td>
                     <td className="px-6 py-4 border-b border-gray-200">1</td>
@@ -80,12 +110,12 @@ function Dash() {
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200">
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Detail</button>
-                    </td>
+                    </td> */}
                 </tr>
                 {/* Duplicate the rows as necessary */}
                 {/* Example Row 2 */}
                 <tr>
-                    <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
+                    {/* <td className="px-6 py-4 border-b border-gray-200">Miaw</td>
                     <td className="px-6 py-4 border-b border-gray-200">03.25.2024</td>
                     <td className="px-6 py-4 border-b border-gray-200">Amba1223334</td>
                     <td className="px-6 py-4 border-b border-gray-200">1</td>
@@ -94,7 +124,7 @@ function Dash() {
                     </td>
                     <td className="px-6 py-4 border-b border-gray-200">
                         <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Detail</button>
-                    </td>
+                    </td> */}
                 </tr>
                 {/* Duplicate the rows as necessary */}
             </tbody>

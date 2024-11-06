@@ -64,7 +64,9 @@ function Checkin() {
                   </div>
                 </div>
   
-              </div><div className="h-px w-full bg-black"></div><div className="flex flex-col gap-5">
+              </div>
+              <form>
+              <div className="h-px w-full bg-black"></div><div className="flex flex-col gap-5">
                   <div className="flex lg:gap-4">
                   </div>
   
@@ -112,17 +114,16 @@ function Checkin() {
                     <label className="block mb-1 font-semibold">Remarks</label>
                     <textarea className="w-full border border-black rounded p-1 resize-none"></textarea>
                   </div>
-  
-  
-  
-  
+   
                   <div className="flex justify-end gap-4 mt-6">
                     <button className="border px-4 py-2 hover:bg-teal-700 hover:text-white rounded-md">Print Form</button>
                     <button className="border px-4 py-2 bg-teal-700 text-white rounded-md">
                       Check Out
                     </button>
                   </div>
-                </div></>
+                </div>
+                </form>
+                </>
    
   )}
   

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from "axios";
 
 import Navbar from "./navbar";
@@ -15,53 +15,39 @@ function Reservation1() {
   const [address, setAddress] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
   const [remarks, setRemarks] = useState("");
-  const [price, setPrice] = useState(500000);
-
-  
-
-  const basePrice = 500000; // Harga dasar
-    const adultFee = 10000;   // Biaya per dewasa
-    const childFee = 5000;     // Biaya per anak
-
-    useEffect(() => {
-      const calculatedPrice = basePrice + (adult * adultFee) + (children * childFee);
-      setPrice(calculatedPrice);
-    }, [adult, children]);
-
+  // const [price  ] = useState(500000);
+ 
   async function Reservasi() {
-    const url = `https://355px512-2000.asse.devtunnels.ms/reservasi`;
+    const url=`${process.env.NEXT_PUBLIC_URL}api/reservasi`;
     try {
-        const res = await axios.post(
-            url,
-            {
-                guestName: guestName,
-                email: email,
-                phone: phone,
-                adult: adult,
-                children: children,
-                address: address,
-                paymentMethod: paymentMethod,
-                remarks: remarks,
-                
-             
-            },
-            {
-                withCredentials: true,
-            }
-        );
-    
-        alert("Reservation successfully created!");
-        console.log(res.data);
-    } catch (error) {
-        console.log(error);
-        alert("Failed to create reservation");
+      const res = await axios.post(
+        url,
+        {
+          guestName: guestName,
+          email: email,
+          phone: phone,
+          adult: adult,
+          children: children,
+          remarks: remarks,
+          paymentMethod: paymentMethod,
+         
+        },
+        {
+          withCredentials: true,
+        }
+      );
+      alert("reservasi berhasil");
+      console.log(res.data);
+    } catch {
+      console.error("Reservasi error:");
+      alert("reservasi gagal silahkan coba lagi");
     }
-}
+  }
   
   return (
     <>
       <div><Navbar/></div>
-
+      
       <section>
         {/* Container */}
         <div className=" mx-auto px-5 md:py-20">
@@ -107,13 +93,14 @@ function Reservation1() {
 
               <div className="absolute bottom-2 right-4 text-right font-semibold">
                 <p className="text-sm">Number of room : 1</p>
-                <p className="text-xl">Rp. {price.toLocaleString()}</p>
+                <p className="text-xl">Rp.500,000</p>
+              {/* <p className="text-xl">Rp. {price.toLocaleString()}</p>  */}
               </div>
             </div>
 
 
-
             {/* Item 2 */}
+                    
             <div className="flex flex-col rounded-md border-2 border-black px-4 py-10 md:p-4 w-full ">
               <div className="flex flex-col gap-5">
                 <div className="flex lg:gap-4">
@@ -141,6 +128,7 @@ function Reservation1() {
                     </p>
                   </div>
                 </div>
+                
                 {/* Divider */} <div className="h-px w-full bg-black"></div>
                 <div className="flex lg:gap-4">
                   <div>
@@ -162,35 +150,35 @@ function Reservation1() {
                     <div className="block text-gray-700 mb-2 font-semibold">
                       Adults
                     </div>
-                    <select
+                    <input
                       id="adults"
                       className="border border-black p-1 w-20 rounded"
                       value={adult}
                       onChange={(e) => setAdult(Number(e.target.value))}
                     >
-                      <option>0</option>
+                      {/* <option>0</option>
                       <option>1 </option>
                       <option>2 </option>
                       <option>3</option>
-                      <option>4 </option>
-                    </select>
+                      <option>4 </option> */}
+                    </input>
                   </div>
                   <div className="ml-5">
                     <div className="block text-gray-700 mb-2 font-semibold">
                       Child
                     </div>
-                    <select
+                    <input
                       id="children"
                       className="border border-black p-1 w-20 rounded"
                       value={children}
                       onChange={(e) => setChildren(Number(e.target.value))}
                     >
-                      <option>0</option>
+                      {/* <option>0</option>
                       <option>1 </option>
                       <option>2 </option>
                       <option>3 </option>
-                      <option>4 </option>
-                    </select>
+                      <option>4 </option> */}
+                    </input>
                   </div>
                 </div>
                 <div className="flex lg:gap-4">
@@ -283,18 +271,19 @@ function Reservation1() {
                   </div>
                 </div>
                 <button 
+                type="submit"
                   className="
 	   bg-[#003C43] text-white font-semibold py-2 px-6 rounded-lg 
   "  onClick={Reservasi}
                 >
                   Book Now
                 </button>
+
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <div><Footer/></div>
     </>
   );

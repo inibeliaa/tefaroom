@@ -1,5 +1,5 @@
 
-import Reservation1 from "./component/reservation1";
+import Loginuser from "./component/loginuser";
 
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <>
    
 
-    <div><Reservation1/></div>
+    <div><Loginuser/></div>
     </>
   );
 }
